@@ -1,0 +1,28 @@
+<!-- <app-child [innerHTML]="msgfromparent">// this child element is custome element, if we use this, this will remove previous content and replace with new content
+from parent. // because of that resion we do not use innerHTML on child
+component . //we use custom property binding to pass data from parent to child.
+</app-child> so now we have to crear a custom property in child component to pass data from parent to child.-->
+<!-- <p [innerHTML]="msgfromparent">this is predefined element and we can use innerHTML on this element.</p> -->
+<!-- <p>if we are using custom property binding then we have to use square bracket to
+    pass data from parent to child. to access data from parent to child we have to
+    use @Input() decorator in child component. @Input() msgfromparent: string; in
+    child component ts file.
+    </p> -->
+<!-- <p>app-child is also a custom element, so we have to use custom property binding to
+    pass data from parent to child. sadme time this is document object model element
+    so we can bind event on this element.
+    </p> -->
+<!-- <p>if we are using custom property binding then we have to use square bracket to
+    pass data from parent to child. to access data from parent to child we have to
+    use @Input() decorator in child component. @Input() msgfromparent: string; in
+    child component ts file.
+    </p> -->
+
+<app-child [getmsgfromparent]="msgfromparent"></app-child>
+<!-- 
+step 1: create child component. step 2: create parent component. step 3: create
+a property in parent component called massagefromparent. step 4: create
+app-parent element in app.component.html. step 5: create a property in child
+component called getmsgfromparent. step 6: create a paragraph in child component
+html file and bind getmsgfromparent property. step 7: create '@input()'
+decorator in child component ts file on getmsgfromparent property. -->

@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Add User Information</h2>
+  <div class="form">
+    <input type="text" [(ngModel)]="fname" placeholder="First Name" />
+    <input type="text" [(ngModel)]="lname" placeholder="Last Name" />
+    <input type="text" [(ngModel)]="contact" placeholder="Contact" />
+    <input type="email" [(ngModel)]="email" placeholder="Email" />
+    <button (click)="addData()">Add</button>
+  </div>
+
+  <!-- Table to display data -->
+  <table border="1" cellspacing="0" cellpadding="10">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Contact</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of dataArray">
+        <td>{{ data.fname }}</td>
+        <td>{{ data.lname }}</td>
+        <td>{{ data.contact }}</td>
+        <td>{{ data.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
